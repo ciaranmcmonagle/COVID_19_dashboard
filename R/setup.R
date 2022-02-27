@@ -1,0 +1,13 @@
+rm(list=ls())
+devtools::install_github("ciaranmcmonagle/ciaransusefulfunctions", 
+                         auth_token =  "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")
+dir.create("R")
+dir.create("R/data_downloads")
+dir.create("R/data_processing")
+dir.create("R/analysis")
+dir.create("R/outputs_plotting")
+dir.create("raw_data")
+dir.create("processed_data")
+dir.create("figs")
+dir.create("results")
+dir.create("analysis_outputs")
