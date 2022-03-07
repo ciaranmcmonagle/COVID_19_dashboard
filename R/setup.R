@@ -1,11 +1,20 @@
 rm(list=ls())
-devtools::install_github("ciaranmcmonagle/ciaransusefulfunctions", 
-                         auth_token =  "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")
+
+if(require(readr)==TRUE&
+   require(dplyr)==TRUE&
+   require(ggplot2)==TRUE&
+   require(lubridate)==TRUE&
+   require(shiny)==TRUE){print("All packages installed!")}else{
+     print("Missing a package! Try installing the packages mentioned here or ask Ciaran for help!")}
+
+
 dir.create("R")
 dir.create("R/data_downloads")
 dir.create("R/data_processing")
 dir.create("R/analysis")
 dir.create("R/outputs_plotting")
+dir.create("R/run_files")
+
 dir.create("raw_data")
 dir.create("processed_data")
 dir.create("figs")
