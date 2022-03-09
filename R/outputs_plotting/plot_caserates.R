@@ -18,8 +18,10 @@ print(ggplot()+
   geom_line(data = covidrates, aes(x = Date, y = DailyPositive, group = HBName, colour = HBName)))
 dev.off()
 
-png("figs/caserates/cumulativerate.png")
+png("figs/caserates/cumulativerate.png", width = 800)
 print(ggplot()+
-  geom_line(data = covidrates,aes(x = Date, y = CumulativePositive, group = HBName, colour = HBName)))
+  geom_line(data = covidrates,aes(x = Date, y = CumulativePositive, group = HBName, colour = HBName)))+
+  theme_minimal()+
+  theme(legend.position = "none")
 dev.off()
 
